@@ -14,10 +14,11 @@ main {
     background: linear-gradient(135deg, #48e1b6 0%, #4e6b88 100%);
     /* #48e1b6 in the top left, #4e6b88 in the bottom left */
     border: none;
-    width: 600px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -29,14 +30,14 @@ header {
 
 #error-msg-txt {
     color: #e74c3c;
-    width: 400px;
+    width: 65%;
     text-align: center;
     display: none;
 }
 
 #city-input-txt {
     padding: 14px;
-    width: 320px;
+    width: 50%;
     border: none;
     border-radius: 20px;
     margin-right: 10px;
@@ -121,4 +122,18 @@ header {
 #humidity-icon-img,
 #wind-icon-img {
     width: 40px;
+}
+
+
+/* Media Query */
+@media (max-width: 699px) {
+    #main {
+        flex: 1;
+    }
+}
+
+@media (min-width: 700px) {
+    #main {
+        width: 600px;
+    }
 }
