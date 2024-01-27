@@ -5,7 +5,6 @@
 
 body {
     font-family: Arial;
-    margin-top: 10px;
     display: flex;
     justify-content: center;
 }
@@ -126,14 +125,34 @@ header {
 
 
 /* Media Query */
-@media (max-width: 699px) {
-    #main {
+@media (max-width: 499px) {
+    main {
         flex: 1;
+    }
+
+    #humidity {
+        margin-right: 5px;
+    }
+
+    #wind-speed {
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    main {
+        width: 450px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+    main {
+        width: 550px;
     }
 }
 
 @media (min-width: 700px) {
-    #main {
+    main {
         width: 600px;
     }
 }
